@@ -52,7 +52,7 @@ public class FlightManagment{
                                         if (response.equals("buy") && flightPrices[i][j] <= eWallet && !(bookResponse.equals(bookedFlights)))
                                         {
                                             System.out.println("\nCongrats, you bought a ticket to " + availableFlights[i][j]);
-                                            bookedFlights += availableFlights[i][j] + " ";
+                                            bookedFlights += bookResponse + " ";
                                             eWallet -= flightPrices[i][j];
                                             break;
 
@@ -62,7 +62,7 @@ public class FlightManagment{
                                             System.out.println("Goodbye :(");
                                             System.exit(0);
                                             
-                                        }else if (response.equals("buy") && bookResponse.equals(bookedFlights))
+                                        }else if (response.equals("buy") && bookResponse.equals(bookedFlights)) //Does not work
                                         {
                                             System.out.println("You own this flight already!");
                                             break;
@@ -91,7 +91,7 @@ public class FlightManagment{
                                System.out.println("\n");
 
                                System.out.println("\n--------------------------");
-                               System.out.println("Flights Booked: " + bookedFlights);
+                               System.out.println("Flights Booked: " + "\n" + bookedFlights);
                                System.out.println("\n--------------------------");
 
                 break;
