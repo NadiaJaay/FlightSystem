@@ -19,7 +19,7 @@ public class FlightManagment{
         int eWallet = 1500000;
         String bookedFlights = "";
 
-        System.out.println("Welcome to NFlights: A flight booking and managment system"  + "           __|__" +
+        System.out.println("Welcome to NFlights: A flight booking and managment system"  + "            __|__" +
                                                      "\n" + "\t\t\t\t\t\t\t       --o--o--(_)--o--o--");
         System.out.println("\nHere are the available flights: ");
         printFlights(availableFlights);
@@ -72,6 +72,7 @@ public class FlightManagment{
                                         }else if (response.equals("cancel"))
                                         {
                                             break;
+
                                         }else
                                         {
                                             System.out.println("INVALID... Goodbye :(");
@@ -88,14 +89,21 @@ public class FlightManagment{
 
                 break;
 
-                case "manage": System.out.println("\n--------------------------");
-                               System.out.println("E-WALLET; $" + eWallet);
-                               System.out.println("\n--------------------------");
-                               System.out.println("\n");
+                case "manage": 
+                                System.out.println("\n--------------------------");
+                                System.out.println("E-WALLET; $" + eWallet);
+                                System.out.println("\n--------------------------");
+                                System.out.println("\n");
 
-                               System.out.println("\n--------------------------");
-                               System.out.println("Flights Booked: " + "\n" + bookedFlights + ",");
-                               System.out.println("\n--------------------------");
+                                System.out.println("\n--------------------------");
+                                System.out.println("Flights Booked: " + "\n" + bookedFlights);
+                                System.out.println("\n--------------------------");
+                                   
+                                
+                                System.out.println("\nIf you would like to book a flight type 'book'. ");
+                                System.out.println("If you would like to manage your current funds or view your tickets using our E-Wallet, type 'manage'.");
+                                System.out.println("If you would like to exit our booking system, type 'exit' ");
+                                // usersChoice = scan.nextLine();
 
                 break;
 
